@@ -91,3 +91,19 @@ listeler gelecektir . Daha sonra aynı listeyi tekrar çektiğimizde bu sefer ö
     }
 ```
 + Yukardaki örnekte key vererek kısıtlama yaptık verdiğimiz id deki kullanıcıları bellekten silecektir. 
+
+## @CachePut() ? 
++ Eğer bir metodun her defasında çalışmasını istiyorsak kullanırız . Bu sayede önbellekte her zaman en güncel veriler olacaktır .
+
+## @Caching() ? 
++ Aynı yöntemde aynı anda hem @CachePut hem de @CacheEvict ek açıklamalarına ihtiyacımız olduğunda kullanılır . 
++ Yani kısacası aynı türde birden fazla açıklama kullanmak istediğimizde kullanırız .
+
+```xml
+    @PostMapping("/save")
+    @Caching(put = @CachePut(value = "cacheUsers" , key = "#result.id") , evict = @CacheEvict(value = "cacheUsers", allEntries = true))
+    public User createUser(@RequestBody UserDTO userDTO) {
+        return userService.createUser(userDTO);
+    }
+```
++ Yukardaki örnekte yeni bir kullanıcı ekleriz @CachePut listeyi güncelledikten sonra eski listeyi @CacheEvict temizler . 
