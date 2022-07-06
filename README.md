@@ -96,7 +96,7 @@ listeler gelecektir . Daha sonra aynı listeyi tekrar çektiğimizde bu sefer ö
 + Eğer bir metodun her defasında çalışmasını istiyorsak kullanırız . Bu sayede önbellekte her zaman en güncel veriler olacaktır .
 
 ## @Caching() ? 
-+ Aynı yöntemde aynı anda hem @CachePut hem de @CacheEvict ek açıklamalarına ihtiyacımız olduğunda kullanılır . 
++ Aynı yöntemde aynı anda hem @CachePut hem de @CacheEvict ek açıklamalarına ihtiyacımız olduğunda kullanırız . 
 + Yani kısacası aynı türde birden fazla açıklama kullanmak istediğimizde kullanırız .
 
 ```xml
