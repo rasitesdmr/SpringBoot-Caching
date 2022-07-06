@@ -41,3 +41,19 @@ gitmek yerine verileri önbellekten alıyoruz .
 + Çok istenen kaynak birden çok kez istendiğinde geliştiricinin hızlı bir şekilde cevap verebilmesi 
 için önbelleğe alması genellikle yararlıdır.
 + Bellekten veri erişimi , veri tabanından veri almaya kıyasla her zaman daha hızlıdır.
+
+# Nasıl Aktif Edilir ? 
++ Bu özelliği aktif etmek için Main metoduna @EnableCaching anotasyonu eklenir .
+
+```xml
+
+@SpringBootApplication
+@EnableCaching
+public class SpringBootCachingApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootCachingApplication.class, args);
+    }
+
+}
+```
