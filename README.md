@@ -25,6 +25,11 @@
 * Spring Boot AOP
 * Spring Boot Jpa
 
+### H2 DB Access
+```xml
+http://localhost:8080/h2-console
+```
+
 # Cache (Önbellek ) ? 
 + Cache , uygulamamızın performansını artırmak için kullandığımız yöntemlerdir .
 + Örneğin , veri tabanına bir sorgu atıyoruz . Gelene verileri ilk olarak önbelleğe yazıyoruz . 
