@@ -65,7 +65,7 @@ public class SpringBootCachingApplication {
 
 ## @Cacheable() ? 
 + Daha önce ilgili key değerine (cacheName) değer yazılmamışsa önce belleğe yazılır . Daha sonra 
-kullanıcıya ilgili değerleri döner. Eğer önbellekle ilgili bilgi varsa önbllekten çağrılacaktır .
+kullanıcıya ilgili değerleri döner. Eğer önbellekle ilgili bilgi varsa önbellekten çağrılacaktır .
 
 ```xml
     @GetMapping("/list")
