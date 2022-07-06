@@ -57,3 +57,8 @@ public class SpringBootCachingApplication {
 
 }
 ```
+### Bilmemiz Gereken Bazı Anotasyonlar 
+* @Cacheable("cacheName")
+* @CacheEvict("cacheName")
+* @CachePut("cacheName")
+* @Caching()
