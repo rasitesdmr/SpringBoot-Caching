@@ -106,4 +106,8 @@ listeler gelecektir . Daha sonra aynı listeyi tekrar çektiğimizde bu sefer ö
         return userService.createUser(userDTO);
     }
 ```
-+ Yukardaki örnekte yeni bir kullanıcı ekleriz @CachePut listeyi güncelledikten sonra eski listeyi @CacheEvict temizler . 
++ Yukardaki örnekte yeni bir kullanıcı ekleriz @CachePut önbelleği günceller ve  eski listeyi @CacheEvict temizler . 
+
+## @Cacheable İle @CachePut Arasındaki fark ? 
++ @Cacheable : Önbelleği kullanarak yöntem yürütülmesinin atlanmasına neden olur .
++ @CachePut : Yöntem her zaman yürütülür ve sonucu her zaman önbelleğe alır
