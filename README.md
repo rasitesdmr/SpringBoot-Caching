@@ -20,6 +20,7 @@
 * Spring Boot Validation
 * Lombok
 * H2 DB 
+* Spring Boot Logging
 * Spring Boot MapStruct
 * Spring Boot Caching
 * Spring Boot AOP
