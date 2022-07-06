@@ -11,16 +11,16 @@
 ```
 ## Prerequisites
 
-* AOP
-* H2 DB
 * Caching
 
 ## Used Technologies
+
 
 * Spring Boot 2.7.1
 * Spring Boot Validation
 * Lombok
 * H2 DB 
+* Spring Boot MapStruct
 * Spring Boot Caching
 * Spring Boot AOP
 * Spring Boot Jpa
