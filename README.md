@@ -77,3 +77,17 @@ kullanıcıya ilgili değerleri döner. Eğer önbellekle ilgili bilgi varsa ön
 ```
 + Yukardaki örnekte bir kullanıcı listemizin olduğunu varsayalım . Bu listeyi ilk çektiğimizde veri tabanında 
 listeler gelecektir . Daha sonra aynı listeyi tekrar çektiğimizde bu sefer önbellekten gelecektir . Ve daha kısa sürede gelecektir .
+
+## @CacheEvict() ? 
++ Önbellekte ilgili key ile yazılmış değer varsa onu silecektir . 
++ Örneğin @Cacheable("users") adında bir metot çağırdık ve önbelleğe kullanıcı listesi yazdırdı . Daha sonra
+@CacheEvict("users") ifadesi olarak metodu çağırırsak , bellekteki kullanıcı listesini silercektir.
+
+```xml
+    @DeleteMapping("/delete/{id}")
+    @CacheEvict(value = "cacheUsers",key = "#id")
+    public void deleteUser(@PathVariable("id") Long id) {
+        userService.deleteUser(id);
+    }
+```
++ Yukardaki örnekte key vererek kısıtlama yaptık verdiğimiz id deki kullanıcıları bellekten silecektir. 
