@@ -62,3 +62,18 @@ public class SpringBootCachingApplication {
 * @CacheEvict("cacheName")
 * @CachePut("cacheName")
 * @Caching()
+
+## @Cacheable() ? 
++ Daha önce ilgili key değerine (cacheName) değer yazılmamışsa önce belleğe yazılır . Daha sonra 
+kullanıcıya ilgili değerleri döner. Eğer önbellekle ilgili bilgi varsa önbllekten çağrılacaktır .
+
+```xml
+    @GetMapping("/list")
+    @Cacheable("cacheUsers")
+    public ResponseEntity<List<UserDTO>> findAllUsers() {
+        List<UserDTO> userDTOList = userMapper.userToUserDTOList(userService.getUsers());
+        return ResponseEntity.ok(userDTOList);
+    }
+```
++ Yukardaki örnekte bir kullanıcı listemizin olduğunu varsayalım . Bu listeyi ilk çektiğimizde veri tabanında 
+listeler gelecektir . Daha sonra aynı listeyi tekrar çektiğimizde bu sefer önbellekten gelecektir . Ve daha kısa sürede gelecektir .
